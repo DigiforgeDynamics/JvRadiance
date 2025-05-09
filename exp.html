@@ -1,0 +1,170 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JV Radiance - Torchlight Structure Project</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+
+    a {
+      color: #1fc2c8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: linear-gradient(to right, #00c9a7, #007a8c);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,255,204,0.05);
+    }
+
+    h1, h2, h3 {
+      color: #00e0d0;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      margin: 1rem 0;
+      background: #00c9a7;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #009e88;
+      cursor: pointer;
+    }
+
+    pre {
+      background-color: #2d2d2d;
+      color: #f8f8f8;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .faq-section summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #00e0d0;
+      margin-top: 1rem;
+    }
+
+    .faq-section details {
+      margin-bottom: 1rem;
+      background: #2b2b2b;
+      padding: 1rem;
+      border-radius: 6px;
+    }
+
+    .version-badge {
+      background: #292929;
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      color: #00ffcc;
+      border: 1px solid #00e0d0;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>JV Radiance <span class="version-badge">v1.0 Concept</span></h1>
+  <p>Understanding & Building the Structure of a Torchlight</p>
+</header>
+
+<div class="container">
+  <h2>💡 Project Overview</h2>
+  <p>
+    JV Radiance is a compact hardware concept that explores the inner workings of a basic torchlight circuit.
+    This project helps you understand how to build a functional and efficient flashlight using standard electronic components.
+    It’s a beginner-friendly project with a real-world utility.
+  </p>
+
+  <h2>🧰 Required Components</h2>
+  <ul>
+    <li>1× White LED (3.0V)</li>
+    <li>1× 220Ω Resistor</li>
+    <li>1× Slide Switch or Push Button</li>
+    <li>1× AA Battery (1.5V) or Rechargeable Cell</li>
+    <li>Battery Holder</li>
+    <li>PCB or Breadboard (Optional for prototyping)</li>
+    <li>Wires & Soldering Tools (for permanent setup)</li>
+  </ul>
+
+  <h2>⚙️ How It Works</h2>
+  <p>The circuit is simple — it uses a DC power source to power an LED through a resistor to prevent damage. A switch is added in series to turn the circuit on/off.</p>
+
+  <pre><code>
+[+] Battery (-)
+ └─ Switch ─ Resistor ─ LED ─ Battery (–)
+  </code></pre>
+
+  <h2>📝 Steps to Build</h2>
+  <ul>
+    <li>Connect the battery holder wires to the switch.</li>
+    <li>From the switch, connect a resistor in series.</li>
+    <li>Connect the resistor to the anode (+) of the LED.</li>
+    <li>Connect the cathode (–) of the LED back to battery ground.</li>
+    <li>Encase the circuit in a plastic body or 3D-printed shell for aesthetics.</li>
+  </ul>
+
+  <h2>🔌 Circuit Diagram</h2>
+  <p>Below is the complete circuit layout for JV Radiance:</p>
+  <div style="text-align:center; margin-top: 1rem;">
+    <a href="https://ibb.co/jk86R549" target="_blank">
+      <img src="https://i.ibb.co/Sw6srxvD/Screenshot-2025-05-09-210524.png" alt="JV Radiance Circuit Diagram" style="max-width:100%; border-radius:10px; box-shadow: 0 0 15px rgba(0,255,255,0.1);" />
+    </a>
+  </div>
+
+  <h2>❓ FAQs</h2>
+  <div class="faq-section">
+    <details>
+      <summary>Can I use a rechargeable battery?</summary>
+      <p>Yes, just ensure it supplies around 1.5V–3.7V max depending on your LED. Adjust the resistor accordingly.</p>
+    </details>
+    <details>
+      <summary>What if I don’t have a resistor?</summary>
+      <p>You risk burning the LED. Try using a higher resistance switch or dim the brightness with PWM if advanced.</p>
+    </details>
+    <details>
+      <summary>Is it safe to solder the components permanently?</summary>
+      <p>Yes, but use a low-temperature soldering iron and always check polarity and resistance values.</p>
+    </details>
+  </div>
+</div>
+
+</body>
+</html>
